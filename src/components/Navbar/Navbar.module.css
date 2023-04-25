@@ -1,0 +1,30 @@
+.containerNavbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #297ea6;
+  height: 5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.categories a {
+  background-color: beige;
+  padding: 10px 20px;
+  color: #297ea6;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}

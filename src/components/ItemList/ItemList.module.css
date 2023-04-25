@@ -1,0 +1,24 @@
+.containerCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 90vh;
+  padding: 40px;
+}
+
+.cardContent {
+  background-color: #297ea6;
+  text-align: center;
+  height: 150px;
+}
+
+.cardButton {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+/* @media (min-width: 768px) {
+  .containerCard {
+    grid-template-columns: 1fr 1fr;
+  }
+} */

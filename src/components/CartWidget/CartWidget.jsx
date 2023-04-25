@@ -1,10 +1,17 @@
-import cart2 from "./assets/cart2.gif";
+import { FaCartPlus } from "react-icons/fa";
+import "./CartWidget.css";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   return (
-    <div>
-      <img src={cart2} alt="cart-widgets" />
-    </div>
+    <Link to={"./cart"}>
+      <div className="cart">
+        <FaCartPlus />
+        <div className="cart-counter">
+          <span>0</span>
+        </div>
+      </div>
+    </Link>
   );
 };
 

@@ -9,6 +9,17 @@
   background-color: #297ea6;
   text-align: center;
   height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* .cardDescription {
+  font-weight: 700;
+} */
+
+.cardPrice {
+  color: orangered;
 }
 
 .cardButton {

@@ -4,6 +4,7 @@ import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import Navbar from "./components/Navbar/Navbar";
 import CartContainer from "./components/Cart/CartContainer";
 import "./App.css";
+import Form from "./components/From/Form";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/category/:categoryName" element={<ItemListContainer />} />
           <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartContainer />} />
+          <Route path="/form" element={<Form />} />
           <Route path="*" element={<h1 style={{ color: "red", display: "flex", justifyContent: "center" }}>404 not found</h1>} />
         </Route>
       </Routes>

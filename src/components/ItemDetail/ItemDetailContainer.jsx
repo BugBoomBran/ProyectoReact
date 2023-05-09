@@ -12,9 +12,18 @@ const ItemDetailContainer = () => {
     let encontrado = products.find((prod) => prod.id === Number(id));
     setProduct(encontrado);
   }, [id]);
+
+  const onAdd = (cantidad) => {
+    let data = {
+      ...product,
+      quantity: cantidad,
+    };
+    console.log(data);
+  };
+
   return (
     <div>
-      <ItemDetail product={product} />
+      <ItemDetail product={product} onAdd={onAdd} />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import "../../App.css";
 const Navbar = () => {
   return (
     <div>
-      <div className={styles.containerNavbar}>
+      <nav className={styles.containerNavbar}>
         <Link to={"/"}>
           <h1>TecnoBoom</h1>
         </Link>
@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
 
         <CartWidget />
-      </div>
+      </nav>
       <Outlet />
     </div>
   );

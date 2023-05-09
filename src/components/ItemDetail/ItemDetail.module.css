@@ -1,16 +1,15 @@
 .containerItemDetail {
   margin: 2rem;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.594);
 }
 
 .itemDetailImage {
   width: 40%;
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.594);
 }
 
 .itemDetailImage > img {
@@ -24,12 +23,30 @@
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   color: black;
   background-color: rgba(255, 255, 255, 0.594);
 }
 
+.textDescription {
+  font-size: 1.5rem;
+}
+
+.textPrice {
+  color: orangered;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.textSpan {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
 .itemDetailbuttom {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }

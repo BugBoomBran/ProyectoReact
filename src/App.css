@@ -11,10 +11,10 @@
   max-width: 1320px;
 } */
 
-img {
-  height: 20rem;
-}
+/* body {
+  background-image: url(https://res.cloudinary.com/dgbsqtmit/image/upload/v1682116497/polygon-scatter-haikei_dyyyqm.png);
+} */
 
 body {
-  background-image: url(https://res.cloudinary.com/dgbsqtmit/image/upload/v1682116497/polygon-scatter-haikei_dyyyqm.png);
+  background-color: rgb(204 224 255 / 55%);
 }

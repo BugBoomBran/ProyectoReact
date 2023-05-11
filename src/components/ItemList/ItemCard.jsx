@@ -27,7 +27,7 @@ const ItemCard = ({ item }) => {
           </div>
           <span className={styles.cardPrice}>
             <Typography variant="body2" fontSize="1.2rem" fontWeight="700" component="span">
-              {item.price}
+              US${item.price}
             </Typography>
           </span>
         </CardContent>

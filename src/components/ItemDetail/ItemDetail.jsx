@@ -21,7 +21,7 @@ const ItemDetail = ({ product, onAdd }) => {
             <p>{product.description}</p>
           </div>
           <div className={styles.textPrice}>
-            <p>{product.price}</p>
+            <p>US${product.price}</p>
           </div>
           <div className={styles.textSpan}>
             <span>Disponibilidad: {product.stock}</span>

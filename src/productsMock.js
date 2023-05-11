@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     title: "Redmi Note 11 Pro 6GB/128GB",
-    price: "US$ 369",
+    price: 369,
     stock: 15,
     description: "El mejor celular calidad precio del mercado",
     category: "celulares",
@@ -11,7 +11,7 @@ export const products = [
   {
     id: 2,
     title: "Xiaomi 12 8GB/256GB",
-    price: "US$ 1.029",
+    price: 1029,
     stock: 10,
     description: "Celular de excelente rendimiento con la última tecnología",
     category: "celulares",
@@ -20,7 +20,7 @@ export const products = [
   {
     id: 3,
     title: "Notebook ASUS TUF i5 10300h/8GB/512Gb /GTX1650",
-    price: "US$ 899.99",
+    price: 899,
     stock: 5,
     description: "PC gamer de gama media todo terreno",
     category: "notebooks",
@@ -29,7 +29,7 @@ export const products = [
   {
     id: 4,
     title: "Samsung Galaxy S23 256 GB 5G",
-    price: "US$ 1.179",
+    price: 1179,
     stock: 9,
     description: "La mejor tecnpología con todo lo que necesitas",
     category: "celulares",
@@ -38,7 +38,7 @@ export const products = [
   {
     id: 5,
     title: "Samsung Galaxy S21 FE 128GB 5G",
-    price: "US$ 829",
+    price: 829,
     stock: 10,
     description: "Versión económica pero con una excelente optimización",
     category: "celulares",
@@ -47,7 +47,7 @@ export const products = [
   {
     id: 6,
     title: "Notebook ASUS TUF Dash F15 I7-11370h/16Gb/512 /RTX3050",
-    price: "US$ 1,375",
+    price: 1375,
     stock: 7,
     description: "PC gamer de gama alta para todo tipo de uso",
     category: "notebooks",
@@ -56,7 +56,7 @@ export const products = [
   {
     id: 7,
     title: "Apple iPhone 14 (128GB)",
-    price: "US$ 1.350",
+    price: 1350,
     stock: 6,
     description: "Seguridad y última tecnología en un sólo celular",
     category: "celulares",
@@ -65,7 +65,7 @@ export const products = [
   {
     id: 8,
     title: "Apple iPhone XR (128GB)",
-    price: "US$ 699",
+    price: 699,
     stock: 8,
     description: "Un celular con un alto rendimiento y económico",
     category: "celulares",
@@ -74,7 +74,7 @@ export const products = [
   {
     id: 9,
     title: "Notebook Asus ROG Ryzen 9 6900HX/16Gb 512Gb /RTX3060",
-    price: "US$ 2,149.99",
+    price: 2149,
     stock: 4,
     description: "PC gamer última tecnología con mejor rendimiento del mercado",
     category: "notebooks",

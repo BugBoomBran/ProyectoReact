@@ -3,7 +3,7 @@ import styles from "./ItemDetail.module.css";
 import { Button } from "@mui/material";
 import CounterContainer from "../Counter/CounterContainer";
 
-const ItemDetail = ({ product, onAdd }) => {
+const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
   return (
     <div>
       <div className={styles.itemDetailbuttom}>
@@ -28,7 +28,7 @@ const ItemDetail = ({ product, onAdd }) => {
             <span>Categoría: {product.category}</span>
           </div>
           <div className={styles.textCounter}>
-            <CounterContainer stock={product.stock} onAdd={onAdd} />
+            <CounterContainer stock={product.stock} onAdd={onAdd} initial={cantidadTotal} />
           </div>
         </div>
       </div>

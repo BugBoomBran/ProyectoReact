@@ -1,23 +1,37 @@
 import ItemList from "./ItemList";
 import { useState, useEffect } from "react";
-import { products } from "../../productsMock";
 import { useParams } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
+import { dataBase } from "../../firebaseConfig";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { categoryName } = useParams();
 
   useEffect(() => {
-    const productsFiltered = products.filter((prod) => prod.category === categoryName);
+    let consulta;
+    const itemCollection = collection(dataBase, "products");
 
-    const tarea = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(categoryName ? productsFiltered : products);
-      }, 1000);
-    });
+    if (categoryName) {
+      const itemCollectionFiltered = query(itemCollection, where("category", "==", categoryName));
+      consulta = itemCollectionFiltered;
+    } else {
+      consulta = itemCollection;
+    }
 
-    tarea.then((res) => setItems(res)).catch((error) => console.log(error));
+    getDocs(consulta)
+      .then((res) => {
+        const products = res.docs.map((product) => {
+          return {
+            ...product.data(),
+            id: product.id,
+          };
+        });
+
+        setItems(products);
+      })
+      .catch((err) => console.log(err));
   }, [categoryName]);
 
   return (

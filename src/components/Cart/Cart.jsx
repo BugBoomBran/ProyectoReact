@@ -1,10 +1,10 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const Cart = ({ cart, deleteProductById, clearCartSwal, total }) => {
+const Cart = ({ cart, deleteProductById, clearCartSwal, total, navigate }) => {
   return (
     <div>
       <div className={styles.cartContainer}>
@@ -12,7 +12,10 @@ const Cart = ({ cart, deleteProductById, clearCartSwal, total }) => {
           {cart.map((item) => {
             return (
               <div key={item.id} className={styles.cartItem}>
-                <img src={item.img} alt="" />
+                <Link to={`/itemDetail/${item.id}`}>
+                  <img className={styles.cartItemImg} src={item.img} alt="" />
+                </Link>
+
                 <div className={styles.cartItemInfo}>
                   <h2>{item.name}</h2>
                   <h2>US${item.price}.-</h2>
@@ -33,8 +36,8 @@ const Cart = ({ cart, deleteProductById, clearCartSwal, total }) => {
           <h3>Precio final: </h3>
           {cart.length > 0 ? (
             <div className={styles.btnCart}>
-              <Button variant="contained" onClick={() => Navigate("/checkout")}>
-                Terminar la compra
+              <Button variant="contained" onClick={() => navigate("/checkout")}>
+                Finalizar compra
               </Button>
               <Button variant="contained" onClick={clearCartSwal}>
                 Vaciar carrito

@@ -17,7 +17,7 @@ const Counter = ({ counter, sumar, restar, onAdd }) => {
       </Button>
 
       <Link to={"../cart"}>
-        <Button variant="contained">Terminar compra</Button>
+        <Button variant="contained">Finalizar compra</Button>
       </Link>
     </div>
   );

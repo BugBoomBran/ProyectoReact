@@ -1,9 +1,10 @@
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import { products } from "../../productsMock";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import Swal from "sweetalert2";
+import { dataBase } from "../../firebaseConfig";
+import { getDoc, collection, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -13,8 +14,16 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    let encontrado = products.find((prod) => prod.id === Number(id));
-    setProduct(encontrado);
+    const itemCollection = collection(dataBase, "products");
+    const refDoc = doc(itemCollection, id);
+    getDoc(refDoc)
+      .then((res) =>
+        setProduct({
+          ...res.data(),
+          id: res.id,
+        })
+      )
+      .catch();
   }, [id]);
 
   const onAdd = (cantidad) => {

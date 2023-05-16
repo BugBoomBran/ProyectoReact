@@ -3,12 +3,16 @@ import styles from "./ItemDetail.module.css";
 import { Button } from "@mui/material";
 import CounterContainer from "../Counter/CounterContainer";
 
+import { ArrowBack } from "@mui/icons-material";
+
 const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
   return (
     <div>
       <div className={styles.itemDetailbuttom}>
         <Link to="/">
-          <Button variant="contained">Volver al listado</Button>
+          <Button variant="contained">
+            <ArrowBack></ArrowBack> Volver al listado
+          </Button>
         </Link>
       </div>
       <div className={styles.containerItemDetail}>

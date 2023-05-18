@@ -22,7 +22,7 @@ const Navbar = () => {
         setCategories(categoriesResult);
       })
       .catch((err) => console.log(err));
-  });
+  }, []);
 
   return (
     <div>

@@ -14,7 +14,7 @@ const CartContainer = () => {
     Swal.fire({
       title: "Se vaciará todo el carrito, estas seguro?",
       showDenyButton: true,
-      showCancelButton: true,
+      showCancelButton: false,
       confirmButtonText: "Si, vaciar",
       denyButtonText: `No, conservar carrito`,
     }).then((result) => {

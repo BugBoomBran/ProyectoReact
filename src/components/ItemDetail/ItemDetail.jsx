@@ -31,9 +31,13 @@ const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
             <span>Disponibilidad: {product.stock}</span>
             <span>Categoría: {product.category}</span>
           </div>
-          <div className={styles.textCounter}>
-            <CounterContainer stock={product.stock} onAdd={onAdd} initial={cantidadTotal} />
-          </div>
+          {product.stock > 0 ? (
+            <div className={styles.textCounter}>
+              <CounterContainer stock={product.stock} onAdd={onAdd} initial={cantidadTotal} />
+            </div>
+          ) : (
+            <h2 style={{ color: "red" }}>No hay stock</h2>
+          )}
         </div>
       </div>
     </div>

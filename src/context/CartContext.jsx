@@ -1,9 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  let CartLocalStorage = JSON.parse(localStorage.getItem("cart"));
+  let saveLocalStorage = CartLocalStorage || [];
+
+  const [cart, setCart] = useState(saveLocalStorage);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const inCart = (id) => {
     let exist = cart.some((element) => element.id === id);

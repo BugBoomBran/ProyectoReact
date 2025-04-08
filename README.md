@@ -1,6 +1,6 @@
 # Descripción del proyecto:
 
-### Este es un ecommerce del Proyecto de Coder House, cuenta con iamgenes reales y valores reales pero es solo una app con el fin de proyecto de estudio.
+### Este es un ecommerce del Proyecto de Coder House, cuenta con imágenes reales y valores reales pero es solo una app con el fin de proyecto de estudio.
 
 # El comando con el link para clonar el repositorio:
 
